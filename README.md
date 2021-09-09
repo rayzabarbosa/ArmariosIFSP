@@ -10,3 +10,8 @@
 ## Paula Sayuri
 ## Pedro Henrique
 ## Rayza Barbosa
+* Gerenciamento da equipe
+* Front-end do projeto
+* JavaScript
+* HTML
+* CSS

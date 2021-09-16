@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #013549;
+    font-family: "Arial", "sans-serif";
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-weight: lighter;
+    color: white;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+
+}
+
+h2{
+    font-weight: lighter;
+    color: white;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+h3{
+    text-align: center;
+    font-weight: lighter;
+    color: black;
+    font-size: 20px;
+}
+
+
+.cadastro{
+    font-family:Verdana;
+    background-color: white;
+    padding: 80px; /distancia entre os elementos e a borda/
+    border-radius: 20px; /arredonda as bordas/
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    top: 8px;
+}
+
+.cadastro input:focus{
+    background-color: rgb(223, 247, 245);
+}
+
+input, select{
+    padding: 15px;
+    font-size: 15px;
+    display: block;
+    border: none;
+    width: 95%;
+}
+
+
+button{
+    border: think;
+    border-color: #013549;
+    border-radius: 10px;
+    color: #013549;
+    cursor: pointer;
+    height: 50px;
+    width: 50%;
+    font-size: 16px;
+    font-family: Verdana;
+    float: right;
+
+}
+
+button:hover{
+    background-color: #013549;
+    color:white;
+    transition: 1s;
+}

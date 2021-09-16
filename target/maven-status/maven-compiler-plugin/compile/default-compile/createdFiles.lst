@@ -1,0 +1,11 @@
+br\com\propeest\armariosifsp\exceptions\CriptoExistException.class
+br\com\propeest\armariosifsp\service\ServiceExc.class
+br\com\propeest\armariosifsp\exceptions\EmailExistsException.class
+br\com\propeest\armariosifsp\controllers\HomeController.class
+br\com\propeest\armariosifsp\dto\RequisicaoNovoAluno.class
+br\com\propeest\armariosifsp\repositories\AlunoRepository.class
+br\com\propeest\armariosifsp\util\Util.class
+br\com\propeest\armariosifsp\service\ServiceAluno.class
+br\com\propeest\armariosifsp\models\Aluno.class
+br\com\propeest\armariosifsp\ArmariosifspApplication.class
+br\com\propeest\armariosifsp\controllers\AlunoController.class

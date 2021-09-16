@@ -1,0 +1,98 @@
+body{
+    background-color:#013549;
+    font-family: "Arial", "sans-serif";
+    }
+
+  *{
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .banner{
+        background-size: cover;
+        background-position: center center;
+        color: white;
+        object-fit: contain;
+        height: 448px;
+        background-image: url('iMG/banneraluguel.jpeg');
+
+    }
+
+    .banner_contents{
+        margin-left: 30px;
+        padding-top: 140px;
+        height: 190px;
+    }
+
+    .banner_title{
+        font-size: 3rem;
+        padding-bottom: 2rem;
+        font-weight: lighter;
+    }
+
+    .banner_description{
+        padding-top: 1.5rem;
+        font-size: 1.3rem;
+        max-width: 360px;
+        color:white;
+    }
+
+    .banner--fadeBottom{
+      margin-top: 145px;
+      height: 7.4rem;
+      background-image: linear-gradient(180deg,transparent, rgba(37,37,37,0.61), black);
+    }
+
+
+  .bloco{
+    margin-right: 5px;
+    transition: transform 450ms;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 150px;
+    height: 210px;
+    background-color: rgb(137, 216, 137);
+    margin-top: 30px;
+  }
+
+  .bloco:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+  }
+
+  .blocos{
+      display: flex;
+      padding: 10px;
+      margin-left: 250px;
+      position: relative;
+      max-width: 50%;
+      /*background-color: lightseagreen;
+
+      /*background-image: linear-gradient(45deg, black, rgb(131, 151, 131));
+     /* filter:opacity(alpha=60);
+      -moz-opacity:0.3;
+      opacity:0.3;*/
+  }
+
+  .row{
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+  }
+
+ .preco{
+     background-color: #013549;
+     border: think;
+     border-color: white;
+     border-radius: 10px;
+     color: white;
+     height: 110px;
+     width: 280px;
+     font-size: 30px;
+     position: relative;
+     transform: translate(274%, 10%);
+     margin-left: -280px;
+     margin-top: 50px;
+    }

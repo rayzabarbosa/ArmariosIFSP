@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #282843;
+}
+
+h1{
+    text-align: center;
+    font-size:50px;
+    color:	white;
+    text-shadow: 2px 2px 2px black; 
+    font-family: cursive;
+}
+
+h2{
+    font-family:Verdana;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+h3{
+    font-family:Verdana;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cadastro{
+    font-family:Verdana;
+    background-color: white;
+    padding: 80px; /*distancia entre os elementos e a borda*/
+    border-radius: 20px; /*arredonda as bordas*/
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    top: 8px;
+}
+
+.cadastro input:focus{
+    background-color: rgb(228, 238, 238) ;
+}
+
+input, select{
+    padding: 15px;
+    font-size: 15px;
+    display: block;
+    border: none;
+    width: 95%;
+}
+
+button{
+    background-color: #353547;
+    border: think;
+    border-color: white;
+    border-radius: 10px;
+    color: #00A86B;
+    cursor: pointer;
+    position: relative;
+    height: 80px;
+    width: 15%; /*largura*/
+    font-size: 25px;
+    font-family: Verdana;
+    box-shadow: 2px 2px 2px #6177A5;
+}
+
+button:hover{
+    background-color: white;
+    color:#282843;
+    box-shadow: inset 2px 2px 2px #6177A5;
+}
+
+.botao1{
+    position:relative;
+    left: 35%;  
+}
+
+.botao2{
+    position:relative;
+    left: 38%;
+}

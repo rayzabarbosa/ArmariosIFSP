@@ -1,0 +1,100 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #013549;
+  font-family: "Arial", "sans-serif";
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background: #fff;
+  width: 12%;
+  height: 100%;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*posição-botões*/
+header nav {
+  float: right;
+  line-height: 30px;
+}
+
+/*estrutura-botões*/
+header nav a{
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+
+}
+
+header nav a1{
+  text-decoration: none;
+  font-size: 20px;
+  background: lightseagreen;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+
+}
+
+header nav a:hover{
+  background: lightseagreen;
+  transition: 1s;
+}
+
+nav img{
+  width: 40%;
+  height: 40%;
+  margin-block-start: 15%;
+}
+
+.principal{
+  text-align: center;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+h5{
+  font-weight: lighter;
+  color: white;
+  font-size: 50px;
+}
+
+h4{
+  font-weight: lighter;
+  color: white;
+  font-size: 30px;
+}
+
+button{
+
+    background-color: #013549;
+    border: think;
+    border-color: lightseagreen;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    height: 50px;/*altura*/
+    width: 50%; /*largura*/
+    font-size: 16px;
+    font-family: Verdana;
+
+}
+
+button:hover{
+    background-color: lightseagreen;
+    color:white;
+    transition: 1s;
+}

@@ -1,0 +1,281 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: "Arial", "sans-serif";
+    min-height: 100vw;
+    min-width: 100vw;
+  }
+
+  header {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 0px;/tamanho-cabeçalho/
+  }
+
+  .menu {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  header .nome {
+    color: rgb(26, 143, 137);
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 80px;
+    float: left;
+  }
+
+  /posição-botões/
+  header nav {
+    float: right;
+    line-height: 80px;
+  }
+
+  /estrutura-botões/
+  header nav a{
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 15px;
+    color: rgb(26, 143, 137);
+  }
+
+  header nav a:hover{
+    background: lightseagreen;
+    border-radius: 45px;
+    transition: 1s;
+    color:#fff;
+  }
+
+  /formatação-menu-tamamho-tela/
+  @media screen and (max-width: 950px){
+    header .logo,
+    header nav {
+      width: 100%;
+      text-align: center;
+      line-height: 100px;
+  }
+}
+
+
+  #showcase {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://img.freepik.com/vecteurs-libre/bibliotheque-casiers-horloge-dans-classe_24640-33930.jpg?size=626&ext=jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh;
+  }
+
+  #showcase h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 170px;
+    font-size: 75px;
+    font-weight: 400;
+    font-family: fantasy;
+    margin-bottom: 20px;
+  }
+
+  #showcase h2{
+    color: #fff;
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: fantasy;
+    margin-bottom: 20px;
+  }
+
+
+  #showcase h3{
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: 200;
+  }
+
+
+  .banner{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  #newslatter {
+    padding: 40px;
+    background: #fff;
+  }
+
+  #newslatter2 {
+    padding: 10px;
+    background: gray;
+    display: flex;
+    width: 99%;
+    height: 100%;
+    margin: 0px ;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #newslatter2 p{
+  font-size: 15px;
+  }
+
+  p{
+    font-size: 20px;
+    font-family: Arial;
+    text-align: justify;
+    color: #fff;
+  }
+
+  h4{
+  font-size: 40px;
+  font-family: Arial;
+  text-align:initial;
+  color: #fff;
+  }
+
+  .primeiro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+  }
+
+  .primeiro .texto{
+    position:absolute;
+    left: 5% ;
+    margin: 20px;
+    width: 30%;
+  }
+
+  .segundo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30px;
+
+  }
+
+  .segundo .texto2{
+    position:absolute;
+    right: 5% ;
+    margin-top: -40px;
+    margin-right: 20px;
+    width: 35%;
+    text-align:end;
+  }
+
+  .terceiro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+
+  }
+  .terceiro .texto{
+    position:absolute;
+    left: 5% ;
+    margin-top: 0px;
+    margin-left: 20px;
+    width: 30%;
+  }
+
+  h5{
+  font-size: 20px;
+  font-family: Arial;
+  text-align: justify;
+  color: #fff;
+  }
+
+  .corpo{
+    display: flex;
+    width: 100%;
+    height: 1300px;
+    margin: 70px auto ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #013549;
+  }
+
+  .caixa img {
+    position: absolute;
+    display: inline-block;
+    width: 600px;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 50%;
+  }
+
+  .caixa2 img {
+    position: flex;
+    display: inline-block;
+    width: 600px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: 80px;
+  }
+
+  button{
+
+      background-color: #013549;
+      border: think;
+      border-color: white;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      height: 50px;/altura/
+      width: 100%; /largura/
+      font-size: 16px;
+      font-family: Verdana;
+      box-shadow: 2px 2px 2px #6177A5;
+
+  }
+
+  button:hover{
+      background-color: white;
+      color:#282843;
+      transition: 1s;
+  }
+
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }

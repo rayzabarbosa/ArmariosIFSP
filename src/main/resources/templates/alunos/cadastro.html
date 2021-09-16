@@ -1,0 +1,80 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring-4-4.dtd">
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Equipe Propeest">
+    <link href="inicial.css" rel="stylesheet" type="text/css"/>
+    <title>Cadastro</title>
+
+    <script type="text/javascript">
+        function validar() {
+            var senha = formcadastro.senha.value;
+            var senha2 = formcadastro.senha2.value;
+
+            if (senha != senha2) {
+                alert("Confirmação de senha incorreta");
+                formcadastro.senha.focus()
+                return false;
+            }
+        }
+
+        function validacaoEmail(field) {
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+
+            if ((usuario.length >=1) &&
+                (dominio.length >=3) &&
+                (usuario.search("@")==-1) &&
+                (dominio.search("@")==-1) &&
+                (usuario.search(" ")==-1) &&
+                (dominio.search(" ")==-1) &&
+                (usuario.search(".")!=-1)&&
+                (dominio.search("aluno.ifsp.edu.br")!=-1) &&
+                (dominio.indexOf(".") >=1)) {
+                document.getElementById("msgemail").innerHTML="<font color='green'>Após confirmar o cadastro, verifique a caixa de entrada do e-mail inserido para ativar sua conta.</font>";
+            }
+            else{
+                document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+                alert("E-mail invalido");
+            }
+        }
+    </script>
+</head>
+
+<body>
+<h1>Armários IFSP</h1>
+<h2>Efetue seu cadastro:</h2>
+
+<section class="cadastro">
+    <h3>Dados Básicos</h3>
+
+    <form name="formcadastro" method="post" th:object="${requisicaoNovoAluno}" action="/alunos">
+        <label>Nome completo</label>
+        <input type="text" name="nome" th:field="*{nome}">
+        <div th:errors="*{nome}"></div>
+        <hr>
+        <br><br>
+        <label>E-mail institucional</label>
+        <input type="email" name="email" th:field="*{email}" onblur="validacaoEmail(formcadastro.email) ">
+        <div th:errors="*{email}"></div>
+        <div id="msgemail"></div>
+        <hr>
+        <br><br>
+        <label>Insira uma senha</label>
+        <input type="password" name="senha" th:field="*{senha}">
+        <div th:errors="*{senha}"></div>
+        <hr>
+        <br><br>
+        <label>Confirme a senha</label>
+        <input type="password" name="senha2">
+        <hr>
+        <br><br>
+
+        <section id="botoes">
+            <button class="botao" type="submit" onclick="return validar()">Concluir</button>
+        </section>
+    </form>
+</section>
+
+</body>
+</html>

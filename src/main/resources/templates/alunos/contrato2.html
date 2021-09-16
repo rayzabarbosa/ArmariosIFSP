@@ -1,0 +1,94 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring-4-4.dtd">
+<html lang="pt-br">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Equipe Propeest">
+        <link href="contrato2.css" rel="stylesheet" type="text/css"/>
+        <title>AL Contrato</title>
+
+        <script type="text/javascript">
+        function formatar(mascara, documento){
+            var i = documento.value.length;
+            var saida = mascara.substring(0,1);
+            var texto = mascara.substring(i)
+
+            if(texto.substring(0,1) != saida){
+                documento.value += texto.substring(0,1);
+            }
+        }
+
+        function validacaoEmail(field) {
+        usuario = field.value.substring(0, field.value.indexOf("@"));
+        dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+
+            if ((usuario.length >=1) &&
+             (dominio.length >=3) &&
+             (usuario.search("@")==-1) &&
+             (dominio.search("@")==-1) &&
+             (usuario.search(" ")==-1) &&
+             (dominio.search(" ")==-1) &&
+             (usuario.search(".")!=-1)&&
+             (dominio.search("aluno.ifsp.edu.br")!=-1) &&
+             (dominio.indexOf(".") >=1)) {
+                document.getElementById("msgemail").innerHTML="<font color='green'>.</font>";
+             }
+            else{
+                document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+                alert("E-mail invalido");
+                }
+            }
+    </script>
+    </head>
+
+<body>
+<h1>Armários IFSP</h1>
+<h2>Olá, aluno! </br> As seguintes informações farão parte do seu contrato:</h2>
+
+<section class="cadastro">
+    <h3>Contrato</h3>
+
+    <form name="formcontrato" method="post" action="/alunos">
+        <label>Nome completo</label>
+        <input type="text" name="nome" placeholder="Nome Completo" required>
+        <hr>
+        <br><br>
+        <label>CPF</label>
+        <input type="text" name="cpf" placeholder="Somente Números" maxlength="14" onkeypress="formatar('###.###.###-##', this)" required>
+        <hr>
+        <br><br>
+        <label>E-mail</label>
+        <input type="email" name="email" onblur="validacaoEmail(formcontrato.email)" required>
+        <div id="msgemail"></div>
+        <hr>
+        <br><br>
+        <label>Celular com DDD</label>
+        <input type="tel" name="telefone" placeholder="Somente Números" maxlength="14" onkeypress="formatar('## # ####-####', this)" required>
+        <hr>
+        <br><br>
+        <label>Prontuário</label>
+        <input type="text" name="registro" placeholder="Somente Números e Letras. Ex.: sp1234567" maxlength="9" onkeypress="formatar('#########', this)" required>
+        <hr>
+        <br><br>
+        <label>Curso</label>
+        <input type="text" name="curso" maxlength="30" required>
+        <hr>
+        <br><br>
+        <label>Turma</label>
+        <input type="text" name="turma" placeholder="Somente Números. Ex.: 413" maxlength="3" required>
+        <hr>
+        <br><br>
+
+        <form action="/action_page.php" onchange="location=this.value" id="termos">
+            <input type="checkbox" id="" name="termos" value="">
+            <a href="./PDF/TERMOS E CONDIÇÕES DE USO E POLÍTICA DE PRIVACIDADE.pdf" download="TERMOS E CONDIÇÕES DE USO E POLÍTICA DE PRIVACIDADE"> Eu li e concordo com os Termos e Condições de Uso e Política de Privacidade</a>
+            <br>
+        </form>
+
+        <section id="botoes">
+            <button class="botao" type="submit" onclick="return validar()">Concluir</button>
+        </section>
+    </form>
+</section>
+</body>
+</html>

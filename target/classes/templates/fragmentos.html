@@ -1,0 +1,13 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring-4-4.dtd">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<div th:fragment="menu">
+    <nav>
+        <a href="#"><img src="/img/icone-perfil.png"><br> Perfil</a>
+        <a href="/armario"><img src="/img/armarios.png"><br> Armário</a>
+        <a href="/contrato"><img src="/img/contrato2.png"><br> Contrato</a>
+        <a href="/ajuda"><img src="/img/ajuda.png"><br> Ajuda</a>
+        <a action="/logout" method="request"><img src="/img/sair.png"><br> Sair</a>
+    </nav>
+</div>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring-4-4.dtd">
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht=devide-width, initial-scale=1.0, maximum-escale=1.0">
+    <meta name="author" content="Equipe Propeest">
+    <link rel = "stylesheet" href = "inicial.css" type="text/css"/>
+    <title>Login</title>
+</head>
+
+<body>
+
+<h1>Armários IFSP</h1><br><br>
+
+<form method="post" action="/login" th:object="${aluno}">
+    <div class="alert alert-danger" role="alert" th:if="${msg}">
+        <strong th:text="${msg}"></strong>
+    </div>
+    <section class="cadastro">
+        <div class="form-group">
+            <label>E-mail</label>
+            <input class="form-control" type="email" th:field="*{email}" required>
+            <hr>
+        </div>
+        <br><br>
+        <div class="form-group">
+            <label>Senha</label>
+            <input class="form-control" type="password" th:field="*{senha}" required>
+            <hr>
+        </div>
+        <br><br>
+        <div class="cadastrar">
+            <a th:href="@{cadastro}">Não possuo uma conta</a>
+        </div>
+        <br><br>
+        <section id="botoes">
+            <button class="botao" type="submit">Entrar</button>
+        </section>
+    </section>
+</form>
+</body>
+</html>

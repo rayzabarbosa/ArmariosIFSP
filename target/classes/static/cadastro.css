@@ -37,8 +37,8 @@ h3{
 .cadastro{
     font-family:Verdana;
     background-color: white;
-    padding: 80px; /distancia entre os elementos e a borda/
-    border-radius: 20px; /arredonda as bordas/
+    padding: 80px; /*distancia entre os elementos e a borda*/
+    border-radius: 20px; /*arredonda as bordas*/
     position: relative;
     margin-left: 25%;
     margin-right: 25%;
